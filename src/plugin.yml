@@ -1,0 +1,19 @@
+name: ModeratorPlus
+version: 1.0
+author: Hug0D
+main: fr.defois.modplus.Main
+commands:
+  sanction:
+    description: Punish a user
+    usage: /sanction [username 1] [username 2] [...]
+    permission: permission.sanction.view_reasons
+    aliases: [ss]
+  sanctionr:
+    description: Punish a user with a reason
+    usage: /sanctionr [sanction_id] [username1] [username2] [...]
+    permission: permission.sanction.execute_sanction
+  record:
+    description: Inspect criminal record of a user
+    usage: /record [username]
+    permissions: permission.sanction.view_record
+    aliases: [sr]
