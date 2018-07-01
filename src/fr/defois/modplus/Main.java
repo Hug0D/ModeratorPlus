@@ -9,11 +9,10 @@ import java.io.IOException;
 
 public class Main extends JavaPlugin {
 
-    private ConfigManager _config;
+    private ConfigManager _config = new ConfigManager();
 
     @Override
     public void onEnable() {
-        _config = new ConfigManager();
         _config.setup();
         getCommand("sanction").setExecutor(new SanctionController(_config));
         getCommand("sanctionr").setExecutor(new SanctionApplyController(_config));
